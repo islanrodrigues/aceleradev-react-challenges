@@ -1,0 +1,354 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 13px;
+}
+
+p {
+	margin: 0;
+}
+
+
+.header-container {
+	background: url(../img/capa-madmax2.jpg);
+	width: 100%;
+	height: 90vh;
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 20px;
+}
+
+.header-container::after {
+	background: linear-gradient( 0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 212, 255, 0) 75% );
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.header-menu {
+	display: flex;
+}
+
+.container {
+	margin: 0 auto;
+	position: relative;
+	width: 960px;
+}
+
+.header-menu .container {
+	z-index: 2;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.menu-list {
+	list-style: none;
+	display: flex;
+	align-items: center;
+}
+
+.menu-item {
+	margin: 0 30px;
+}
+
+.menu-item a {
+	text-decoration: none;
+	color: #FFF;
+	text-transform: uppercase;
+	font-weight: bold;
+	transition: all 0.2s ease-in-out;
+}
+
+.menu-item a:hover {
+	color: #E4BB23;
+}
+
+.user-picture {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.user-picture img {
+	width: 45px;
+	height: 45px;
+	border-radius: 100%;
+	margin-right: 15px;
+}
+
+.user-picture label {
+	color: #FFF;
+	font-weight: bold;
+}
+
+.header-content .container {
+	position: relative;
+	z-index: 2;
+}
+
+.movie-title {
+	color: #FFF;
+	text-transform: uppercase;
+	font-size: 5em;
+	font-weight: bold;
+	margin: 0;
+}
+
+.movie-kinds {
+	margin: 15px 0px 30px;
+}
+
+.kind-list {
+	display: flex;
+	padding: 0;
+	list-style: none;
+}
+
+.kind-item {
+	text-transform: uppercase;
+	color: #FFF;
+	margin-right: 15px;
+}
+
+.trailer-button {
+	background-color: #E4BB23;
+	text-decoration: none;
+	color: #000;
+	border-radius: 40px;
+	border: none;
+	padding: 15px 50px;
+	display: inline-block;
+	font-size: 1.2em;
+	position: relative;
+	transition: all 0.2s ease-in-out;
+}
+
+.trailer-button:hover {
+	background-color: #BC9A1D;
+}
+
+.trailer-button i {
+	font-size: 1.5em;
+	position: absolute;
+	right: 15px;
+	top: 12px;
+}
+
+.header-content-info {
+	color: #FFF;
+	font-size: 1.2em;
+	padding: 20px 0;
+}
+
+.header-content-info p {
+	margin: 15px 0;
+}
+
+.header-content-info p:last-child {
+	color: #E4BB23;
+}
+
+.content-container {
+	background-color: #F2F2F2;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.catalog-menu-list {
+	margin: 0;
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+	padding: 0px 20px;
+	
+}
+
+.catalog-menu-item {
+	margin: 0 20px;
+	padding: 25px 0px;
+	transition: all 0.2s ease-in-out;
+}
+
+.catalog-menu-item:hover {
+	box-shadow: inset 0 -1px 0 #E4BB23;
+}
+
+.catalog-menu-item a {
+	text-decoration: none;
+	color: #E4BB23;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.catalog-movies {
+	padding: 20px 0px;
+	margin: 10px 0px;
+}
+
+.movies-card-list {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.movies-card-item {
+	height: auto;
+	width: 24%;
+	display: flex;
+	flex-direction: column;
+	background-color: #FFF;
+	margin-bottom: 30px;
+	border-radius: 8px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+}
+
+.movies-card-item figure {
+	margin: 0;
+	width: 100%;
+	height: auto;
+	position: relative;
+	overflow: hidden;
+}
+
+.movies-card-item figure img {
+	width: 100%;
+	background-size: contain;
+	height: auto;
+}
+
+.card-item-movie-poster {
+	position: relative;
+	z-index: 1;
+
+}
+
+.card-item-poster-info {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+	padding: 80px 20px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	transition: all 0.2s ease-in-out;
+}
+
+.movies-card-item:hover .card-item-poster-info {
+	opacity: 1;
+}
+
+.card-item-poster-info h4 {
+	color: #e4bb23;
+    font-size: 1.6em;
+	line-height: 1em;
+	margin: 20px 0;
+    text-transform: uppercase;
+}
+
+.poster-info-link {
+	color: #FFF;
+	font-size: 4em;
+    transition: all 0.2s ease-in-out;
+}
+
+.poster-info-link:hover {
+	color: #E4BB23;
+}
+
+.card-info {
+	padding: 10px;
+}
+
+.card-info > p {
+	margin: 13px 0;
+}
+
+.card-info h4 {
+	text-transform: uppercase;
+	margin: 0;
+}
+
+.card-item-kind-movie {
+	text-decoration: none;
+	color: #E4BB23;
+	font-size: 0.95em;
+}
+
+.card-item-kind-movie:hover {
+	border-bottom: 1px solid #E4BB23;
+}
+
+.card-info-footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 1.5em;
+	color: #CCC;
+}
+
+.card-info-footer > p {
+	color: #000;
+	font-weight: bold;
+}
+
+.footer-container {
+	padding: 20px 0px;
+}
+
+.card-info-footer i:hover {
+	color: #E74c3c;
+}
+
+.footer-items {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.social-medias-item {
+	text-decoration: none;
+	color: #BABABA;
+	font-size: 2em;
+	transition: all 0.2s ease-in-out;
+	margin-left: 35px;
+}
+
+.twitter-icon:hover {
+	color: #55ACEE;
+}
+
+.facebook-icon:hover {
+	color: #3B5998;
+}
+
+.instagram-icon:hover {
+	color: #E95950;
+}
+
+
+
+
+
