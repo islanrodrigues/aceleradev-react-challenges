@@ -11,18 +11,18 @@ function getShoppingCart(ids, productsList) {
 
 	const totalWithoutDiscount = productsList
 		.filter(product => ids.includes(product.id))
-		.reduce((accumalator, productFiltered) => accumalator += productFiltered.regularPrice, 0)
+		.reduce((accumulator, productFiltered) => accumulator += productFiltered.regularPrice, 0)
 		.toFixed(2);
 	
 	const totalPrice = productsList
 		.filter(product => ids.includes(product.id))
-		.reduce((accumalator, productFiltered) => {
+		.reduce((accumulator, productFiltered) => {
 			const promotionPrice = productFiltered.promotions.find(product => product.looks.includes(promotion))
 
 			if (!promotionPrice)
-				return accumalator += productFiltered.regularPrice;
+				return accumulator += productFiltered.regularPrice;
 
-			return accumalator += promotionPrice.price;
+			return accumulator += promotionPrice.price;
 		}, 0)
 		.toFixed(2);
 	
